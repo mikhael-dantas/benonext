@@ -1,0 +1,10 @@
+.home-panel {
+    aspect-ratio: 4/3;
+}
+
+
+@media screen and (min-width: 480px) {
+    .home-panel {
+        aspect-ratio: 2/1;
+    }
+}

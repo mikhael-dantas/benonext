@@ -1,0 +1,114 @@
+/* .animationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .square {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    animation: spin 3s linear forwards;
+  }
+  
+  .square1 {
+    background-color: red;
+    animation-delay: 0s;
+  }
+  
+  .square2 {
+    background-color: green;
+    animation-delay: 0.5s;
+  }
+  
+  .square3 {
+    background-color: blue;
+    animation-delay: 1s;
+  }
+  
+  @keyframes spin {
+    0% {
+      opacity: 1;
+      transform: translateY(-50%) rotate(0deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-50%) rotate(360deg);
+    }
+  }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   .animationContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .square {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    animation: fadeOut 2s linear forwards;
+  }
+  
+  .svgContainer {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+  }
+  
+  .line {
+    stroke: black;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-dasharray: 0, 32.67rem;
+    animation: drawLine 2s linear forwards;
+  }
+  
+  @keyframes drawLine {
+    0% {
+      stroke-dasharray: 0, 32.67rem;
+    }
+    50% {
+      stroke-dasharray: 18.44rem, 32.67rem;
+    }
+    100% {
+      stroke-dasharray: 32.67rem, 32.67rem;
+    }
+  }  
+  
+  @keyframes fadeOut {
+    0% {
+      display: initial;
+    }
+    100% {
+      display: none;
+    }
+  }
+  
