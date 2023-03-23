@@ -1,13 +1,9 @@
-import HomeInfoPanel from "@myComponents/HomeInfoPanel";
-import HomePanel from "@myComponents/HomePanel";
-import HomeShowList from "@myComponents/HomeShowList";
+import { Dashboard } from '@myComponents/Dashboard';
+import React from 'react';
+
 
 export default function Index() {
    return (
-      <div>
-            <HomePanel/>
-            <HomeShowList/>
-            <HomeInfoPanel/>
-      </div>
+      <Dashboard/>
    )
 }

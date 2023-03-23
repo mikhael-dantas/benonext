@@ -1,7 +1,4 @@
-import { ChakraProvider, theme } from "@chakra-ui/react"
 import MyLayout from "@myComponents/layout"
-import { AlertStackProvider } from "@myContexts/AlertStackContext"
-import { BatataProvider } from "@myContexts/ApiContext"
 import { AppProps } from "next/app"
 import { Provider } from 'react-redux';
 
@@ -22,19 +19,13 @@ function MyApp({ Component, pageProps }: AppProps) {
     cache: new InMemoryCache(),
   });
   return (
-    <Provider store={store}>
     <ApolloProvider client={client}>
-    <ChakraProvider theme={theme}>
-      <AlertStackProvider>
-        <BatataProvider>
-          <MyLayout>
-          <Component {...pageProps} />
-          </MyLayout>
-        </BatataProvider>
-      </AlertStackProvider>
-    </ChakraProvider>
-    </ApolloProvider>
+    <Provider store={store}>
+      <MyLayout>
+        <Component {...pageProps} />
+      </MyLayout>
     </Provider>
+    </ApolloProvider>
   )
 }
 
