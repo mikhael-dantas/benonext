@@ -25,7 +25,7 @@ const Layout = ({ children }: {children: React.ReactNode} ) => {
     
     <Box display={isNonMobile ? "flex" : "block"} width="100%" height="100%">
       <Sidebar
-        user={data || {}}
+        user={data}
         isNonMobile={isNonMobile}
         drawerWidth="250px"
         isSidebarOpen={isSidebarOpen}
@@ -33,7 +33,7 @@ const Layout = ({ children }: {children: React.ReactNode} ) => {
       />
       <Box flexGrow={1}>
         <Navbar
-          user={data || {}}
+          user={data}
           isSidebarOpen={isSidebarOpen}
           setIsSidebarOpen={setIsSidebarOpen}
         />
