@@ -1,12 +1,12 @@
 import { combineReducers } from '@reduxjs/toolkit';
-import cartReducer, { CartState } from './cart';
+import themeReducer, { themeType } from './theme';
 
 export interface RootState {
-  cart: CartState;
+    theme: themeType;
 }
 
 const rootReducer = combineReducers<RootState>({
-  cart: cartReducer,
+    theme: themeReducer,
 });
 
 export default rootReducer;
