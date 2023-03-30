@@ -84,7 +84,6 @@ const AddNews = () => {
                     );
                   }}
                   error={touched.news_title && Boolean(errors.news_title)}
-                  helperText={touched.news_title && errors.news_title}
                   sx={{ gridColumn: "span 4" }}
                 />
 
@@ -96,7 +95,6 @@ const AddNews = () => {
                   name="friendly_url"
                   value={values.friendly_url}
                   error={touched.friendly_url && Boolean(errors.friendly_url)}
-                  helperText={touched.friendly_url && errors.friendly_url}
                   sx={{ gridColumn: "span 4" }}
                 />
 
