@@ -9,7 +9,7 @@ function* logAddToCart(action: ReturnType<typeof addToCartRequest>) {
   let newPrice = action.payload.price;
 
   // Using the call effect to handle async operations
-  yield call(delay, 5000);
+  yield call(delay, 100);
 
   newPrice = newPrice + 1;
   action.payload.price = newPrice;

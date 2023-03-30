@@ -3,6 +3,8 @@ import CurrentFinances from './Finances';
 import TotalIncome from './TotalIncome';
 import { ChartTest } from './Chart';
 import Dashboardsss from './dashboard';
+import { TrackedNumbers } from './TrackedNumbers';
+import FinancialDashboard from './TrackedMoney';
 
 // import { Container } from './styles';
 
@@ -45,8 +47,11 @@ export const Dashboard: React.FC = () => {
     <TotalIncome days={30}/>
     <ChartTest/>
     <Dashboardsss/>
+    <TrackedNumbers/>
+    <FinancialDashboard/>
   </div>
   </>
   )
 
 }
+

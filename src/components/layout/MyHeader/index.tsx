@@ -5,10 +5,7 @@ import React, { useEffect } from 'react';
 import { TUserInfo } from 'src/lib/auth0/auth0';
 
 const hrefs = [
-    { href: '/categories', label: 'Categories' },
-    { href: '#/hot', label: 'Hot!' },
-    { href: '#/new', label: 'New ☼' },
-    { href: '#/daily', label: 'Daily Offer!' },
+    { href: '/products', label: 'Products' },
     { href: '/manage', label: 'Manage' },
 ];
 
