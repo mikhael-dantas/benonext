@@ -12,16 +12,8 @@ import { themeSettings } from "../../styles/theme";
 const Layout = ({ children }: {children?: React.ReactNode} ) => {
   const [isReady, setIsReady] = useState(false);
   useEffect(() => {
-    setTimeout(() => {
-      setIsReady(true);
-    }, 0);
+    setIsReady(true);
   }, []);
-
-  if (!isReady) {
-    return null;
-  }
-
-
 
   const isNonMobile = useMediaQuery("(min-width: 600px)");
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
@@ -32,6 +24,9 @@ const Layout = ({ children }: {children?: React.ReactNode} ) => {
     const themeMode = useSelector((state: RootState) => {return state.theme.mode})
 
   
+    if (!isReady) {
+      return null;
+    }
   return (
     <>
       <ThemeProvider theme={themeSettings(themeMode)}>
