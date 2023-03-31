@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Box, ThemeProvider, useMediaQuery } from "@mui/material";
 import { useSelector } from "react-redux";
 /* import Navbar from "components/Navbar"; */
@@ -9,7 +9,20 @@ import { themeSettings } from "../../styles/theme";
 
 
 
-const Layout = ({ children }: {children: React.ReactNode} ) => {
+const Layout = ({ children }: {children?: React.ReactNode} ) => {
+  const [isReady, setIsReady] = useState(false);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsReady(true);
+    }, 0);
+  }, []);
+
+  if (!isReady) {
+    return null;
+  }
+
+
+
   const isNonMobile = useMediaQuery("(min-width: 600px)");
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
     const data: userType = {
