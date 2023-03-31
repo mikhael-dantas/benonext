@@ -41,7 +41,13 @@ const AddNews = () => {
 
   const handleFormSubmit = async (values: any) => {
     /* const blogresponse = await CreateBlog(values); */
-    console.log(values);
+    await fetch("http://localhost:3002/blog", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(values),
+    })
   };
 
   return (
