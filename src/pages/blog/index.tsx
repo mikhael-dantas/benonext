@@ -41,13 +41,16 @@ const AddNews = () => {
 
   const handleFormSubmit = async (values: any) => {
     /* const blogresponse = await CreateBlog(values); */
+    const formData = new FormData();
+
+    formData.append("friendlyUrl", values.friendly_url);
+    formData.append("newsTitle", values.news_title);
+    formData.append("news", values.news);
+    formData.append("photo", values.photo);
     await fetch("http://localhost:3002/blog", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(values),
-    })
+      body: formData,
+    });
   };
 
   return (
